@@ -1,0 +1,83 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background: rgb(162, 194, 218);
+}
+
+.start_button,
+.information_box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*Begin Quiz Button Styling*/
+.start_button{
+    font-size: 30px;
+    font-weight: 600;
+    color: black;
+    padding: 20px 30px;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.information_box{
+    width: 510px;
+    border-radius: 10px;
+    background: rgb(248, 245, 239);
+}
+
+.information_box .information_title{
+    height: 35px;
+    width: 100%;
+    border-bottom: 2px solid darkgrey;
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.information_box .information_list{
+    padding: 20px 40px;
+}
+
+.information_box .information_list .information{
+    margin: 5px 0;
+    font-size: 20px;
+}
+
+.information_box .information_list .information span{
+    font-weight: 300;
+    color: darkblue;
+}
+
+.information_box .buttons{
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 40px;
+    border-top: 2px solid darkgray;
+}
+
+.information_box .buttons button{
+   margin: 0 7px;
+   height: 40px;
+   width: 700px; 
+   border: 2px solid black;
+   background: darkgray;
+   border-radius: 10px;
+   font-size: 20px;
+   font-weight: 400;
+   cursor: pointer;
+}
