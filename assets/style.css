@@ -7,11 +7,12 @@
 }
 
 body{
-    background: rgb(162, 194, 218);
+    background: rgb(85, 136, 175);
 }
 
 .start_button,
-.information_box{
+.information_box,
+.quiz_box{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -31,6 +32,7 @@ body{
 }
 
 .information_box{
+    display: none;
     width: 510px;
     border-radius: 10px;
     background: rgb(248, 245, 239);
@@ -75,9 +77,44 @@ body{
    height: 40px;
    width: 700px; 
    border: 2px solid black;
-   background: darkgray;
    border-radius: 10px;
    font-size: 20px;
    font-weight: 400;
    cursor: pointer;
+   transition: all 0.3s ease;
 }
+
+.buttons button.restart{
+    color: black
+    border-color: black;
+}
+
+.buttons button.restart:hover{
+    background: darkgrey;
+}
+
+.buttons button.quit{
+    color: black;
+    border-color: black;
+}
+
+.buttons button.quit:hover{
+    color: black
+    border-color: black; 
+}
+
+.quiz_box{
+    width: 500px;
+    background: darkgrey;
+    border-radius: 5px;
+}
+
+.quiz_box header{
+    height: 70px;
+    padding: 0 30px;
+    background: darkgrey;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+

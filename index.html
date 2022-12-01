@@ -2,16 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial scale=1.0">
-    <title> JavaScript Quiz</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/style.css" />
+    <title> JavaScript Quiz</title>
 </head>
 <body>
     <!-- Begin Quiz Button -->
     <div class="start_button"><button>Begin Quiz</button></div>
 
     <!--Informational Box-->
-    <div class="information_box">
+<div class="information_box">
         <div class="information_title">
             <span>Simple Rules for the Quiz</span>
     </div>
@@ -27,7 +28,43 @@
         <button class="quit">End Quiz</button>
         <button class="restart">Continue</button>
     </div>
-    </div>
-        
+</div>
+
+<!--This is the actual quiz box-->
+<div class="quiz_box"></div>
+    <header>
+        <div class="title">Java Coding Quiz</div>
+        <div class="timer">
+            <div class="time_text">Time Remaining</div>
+            <div class="timer_seconds">20</div>
+        </div>
+    </header> 
+    <section>
+        <div class="que_text">
+            <span>What is Java?</span>
+        </div>
+        <div class="options_list">
+            <div class="options">
+                <span>A high-level programing language and is a collection of objects</span>
+                <div class="icon cross"><i class="fas fa-check"></i></div>
+            <div class="options">
+                <span>A system</span>
+                <div class="icon tick"><i class="fas fa-times"></i></div>
+            <div class="options">
+                <span>A single object</span>
+            </div>
+            <div class="options">
+                <span>A cup of coffee</span>
+            </div>    
+        </div>
+    </section> 
+    
+    <!--Quiz Box Footer-->
+    <footer>
+        <div class="total_que">
+            <span><p>2</p>of<p>5</p>Questions</span>
+        </div>
+        <button class="next_button">Next Question</button>
+    </footer>
 </body>    
 </html>
