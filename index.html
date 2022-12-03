@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/style.css" />
     <title> JavaScript Quiz</title>
+    <link rel="stylesheet" href="assets/style.css" />
+    <!--This is font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font" />
 </head>
 <body>
     <!-- Begin Quiz Button -->
@@ -14,8 +16,7 @@
     <!--Informational Box-->
 <div class="information_box">
         <div class="information_title">
-            <span>Simple Rules for the Quiz</span>
-    </div>
+            <span>Simple Rules for the Quiz</span></div>
     <div class="information_list">
         <div class="information">1. There will be <span> 20 seconds</span> per question.</div>
         <div class="information">2. You can only select an answer once, your right or wrong.</div>   
@@ -31,40 +32,51 @@
 </div>
 
 <!--This is the actual quiz box-->
-<div class="quiz_box"></div>
+<div class="quiz_box">
     <header>
         <div class="title">Java Coding Quiz</div>
         <div class="timer">
-            <div class="time_text">Time Remaining</div>
+            <div class="time_remaining_text">Time Remaining</div>
             <div class="timer_seconds">20</div>
-        </div>
+        </div>    
+            <div class="time_line"></div>
     </header> 
     <section>
         <div class="que_text">
-            <span>What is Java?</span>
+            <!--Questions are coming in from Java-->
         </div>
         <div class="options_list">
-            <div class="options">
-                <span>A high-level programing language and is a collection of objects</span>
-                <div class="icon cross"><i class="fas fa-check"></i></div>
-            <div class="options">
-                <span>A system</span>
-                <div class="icon tick"><i class="fas fa-times"></i></div>
-            <div class="options">
-                <span>A single object</span>
-            </div>
-            <div class="options">
-                <span>A cup of coffee</span>
-            </div>    
-        </div>
+            <!--Options from JavaScript-->
+        </div>    
     </section> 
     
     <!--Quiz Box Footer-->
     <footer>
         <div class="total_que">
-            <span><p>2</p>of<p>5</p>Questions</span>
+            <!--Question number from JavaScript-->>
         </div>
         <button class="next_button">Next Question</button>
     </footer>
-</body>    
+</div>
+<!--Results Box area-->
+<div class="result_box">
+    <div class="icon">
+        <i class="fas fa-crown"></i>
+</div>
+<div class="completion_text">You've finished the Quiz, Yah!</div>
+    <!--The Results (Score) from JavaScript-->
+</div>
+<div class="buttons">
+    <button class="restart"> Restart Quiz</button>
+    <button class="quit">Leave Quiz</button>
+</div>
+</div>
+<!--This JavaScript file has questions and options-->
+<script src="js/questions.js"></script>
+
+<!--This JavaScript file has all of the quiz codes-->
+<script src="js/script.js"></script>
+
+</body>  
+</html>
 </html>
