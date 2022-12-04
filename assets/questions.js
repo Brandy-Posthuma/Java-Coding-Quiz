@@ -1,58 +1,75 @@
 // setting up an array and sending the questions, number, options, and answers
-let questions = [
+var questions = [
+    //Question #1
     {
-        number: 1,
-        question: "What is JavaScript?"
-        answer: JavaScript is a scripting language used along with HTML and CSS to make the website interactive 
-        options: [
-            "JavaScript is a scripting language used to make the website interactive",
-            "JavaScript is an assembly language used to make the website interactive",
-            "JavaScript is a compiled language used to make the website interactive",
-            "None of the above",
-        ]
+        id: 1,
+        question: "What is JavaScript?",
+        a: "A scripting language used to make the website interactive",
+        b: "A cup of Joe",
+        c: "An assembly language used to make the website interactive",
+        d: "Not any of these answers",
+        answer: "a"   
     },
+    //Question #2
     {
-        number: 2,
-        question: "Which of the following statements is true about JavaScript?"
-        answer: JavaScript is an Object-Based language
-        options: [
-            "JavaScript is Assembly-language",
-            "JavaScript is a cup of coffee",
-            "JavaScript is an Object-Based language",
-            "JavaScript is a High-level language",
-        ]
+        id: 2,
+        question: "JavaScript is an _____language?",
+        a: "Object-Oriented",
+        b: "Procedural",
+        c: "Object-Based",
+        d: "All of the Above",
+        answer: "a"
     },
+    //Question #3
     {
-        number: 3,
-        question: Which of the following is not a JavaScript data type?
-        answer: All of the above
-        options: [
-            "Undefined",
-            "Number",
-            "Null",
-            "All of the Above",
-        ]
+        id: 3,
+        question: "Which of the following is not a JavaScript data type?",
+        a: "Undefined",
+        b: "Number",
+        c: "Null",
+        d: "All of the Above",
+        answer: "d"
     },
+    //Question #4
     {
-        number: 4,
-        question: Which of the following can be used to call a JavaScript Code Snippet?
-        answer: Function/Method
-        options: [
-            "Function/Method",
-            "RMI",
-            "Preprocessor",
-            "Triggering Event",
-        ]
+        id: 4,
+        question: "Which of the following can be used to call a JavaScript Code Snippet?",
+        a: "Function/Method",
+        b: "RMI",
+        c: "Preprocessor",
+        d: "Triggering Event",
+        answer: "a"
     },
+    //Question #5
     {
-        number: 5,
-        question: Which one of the following is known as a Conditional Expression?
-        answer: Immediate if
-        options: [
-            "If-then-else statement",
-            "Switch Statement",
-            "Immediate if",
-            "Alternative to if-else",
-        ]
-    }, 
-]
+        id: 5,
+        question: "Which symbol is used to separate JavaScript statements?",
+        a: "Colon (:)",
+        b: "Underscore (_)",
+        c: "Semicolon (;)",
+        d: "Comma (,)",
+        answer: "c"
+    } 
+];
+
+
+const question = document.getElementById("question");
+const answers = Array.from(document.getElementsByClassName("answers"));
+const questionCounterText = document.getElementById('counter');
+const scoreText = document.getElementById("score");
+
+console.log(questions);
+let questionCounter;
+let score;
+const MAX_Questions = 5;
+
+let acceptingAnswers;
+
+startGame = () => {
+    questionCounter = 0;
+    score = 0;
+    acceptingAnswers = true;
+    availableQuestions = getRandomQuestions(questions, MAX_QUESTIONS);
+        consolelog(availableQuestions);
+        getNewQuestion();
+};

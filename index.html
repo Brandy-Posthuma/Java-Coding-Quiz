@@ -5,78 +5,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> JavaScript Quiz</title>
-    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="stylesheet" href="./assets/style.css" />
     <!--This is font awesome-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font" />
+    
 </head>
 <body>
-    <!-- Begin Quiz Button -->
-    <div class="start_button"><button>Begin Quiz</button></div>
+   <header>
+    <h1 class="page-title">Fun JavaScript Quiz</h1>
+   </header>
 
-    <!--Informational Box-->
-<div class="information_box">
-        <div class="information_title">
-            <span>Simple Rules for the Quiz</span></div>
-    <div class="information_list">
-        <div class="information">1. There will be <span> 20 seconds</span> per question.</div>
-        <div class="information">2. You can only select an answer once, your right or wrong.</div>   
-        <div class="information">3. Once time runs out, no selection will be allowed.</div>
-        <div class="information">4. Once the quiz starts you will not be able to exit the quiz while playing.</div> 
-        <div class="information">5. Points will be awarded based on correct answers, no partial points.</div> 
-        <div class="information">6. There will be a highscore board as well.</div>      
-    </div>
-    <div class="buttons">
-        <button class="quit">End Quiz</button>
-        <button class="restart">Continue</button>
-    </div>
-</div>
-
-<!--This is the actual quiz box-->
-<div class="quiz_box">
-    <header>
-        <div class="title">Java Coding Quiz</div>
-        <div class="timer">
-            <div class="time_remaining_text">Time Remaining</div>
-            <div class="timer_seconds">20</div>
-        </div>    
-            <div class="time_line"></div>
-    </header> 
-    <section>
-        <div class="que_text">
-            <!--Questions are coming in from Java-->
+   <div class="container my-5">
+        <div id="introduction">
+            <div class="counter">
+            <p class="prefix">Question:</p>
+            <h1 id="counter">1/10</h1>
         </div>
-        <div class="options_list">
-            <!--Options from JavaScript-->
-        </div>    
-    </section> 
-    
-    <!--Quiz Box Footer-->
-    <footer>
-        <div class="total_que">
-            <!--Question number from JavaScript-->>
-        </div>
-        <button class="next_button">Next Question</button>
-    </footer>
+   </div>
+   <div class="score">
+       <p class="prefix">Your Score</p> 
+       <h1 id="score" class="score">0</h1>
+   </div>
 </div>
-<!--Results Box area-->
-<div class="result_box">
-    <div class="icon">
-        <i class="fas fa-crown"></i>
+<div class="question-holder row">
+    <div class="col-12">
+        <h1 id="question">What's the right answer to this question?</h1>
+    </div>
 </div>
-<div class="completion_text">You've finished the Quiz, Yah!</div>
-    <!--The Results (Score) from JavaScript-->
-</div>
-<div class="buttons">
-    <button class="restart"> Restart Quiz</button>
-    <button class="quit">Leave Quiz</button>
-</div>
-</div>
-<!--This JavaScript file has questions and options-->
-<script src="js/questions.js"></script>
 
-<!--This JavaScript file has all of the quiz codes-->
-<script src="js/script.js"></script>
+<div id="answer-container">
+    <div class="col-12">
+        <div class="answer-card card">
+            <p class="answer-prefix">A</p>
+            <p class="answer-text answers" data-answer="a"> Answer A</p>
+        </div>
+    </div>
+</div>
+
+<div class="col-12">
+    <div class="answer-card card">
+            <p class="answer-prefix">B</p>
+            <p class="answer-text answers" data-answer="b"> Answer B</p>
+        </div>
+    </div>
+</div>
+
+<div class="col-12">
+    <div class="answer-card card">
+            <p class="answer-prefix">C</p>
+            <p class="answer-text answers" data-answer="c"> Answer C</p>
+         </div>
+    </div>
+</div>
+
+<div class="col-12">
+    <div class="answer-card card">
+            <p class="answer-prefix">D</p>
+            <p class="answer-text answers" data-answer="d"> Answer D</p>
+         </div>
+    </div>
+</div>
+</div>
+</div>
+
+    <!--JavaScript-->
+    <script src="./assets/questions.js"></script>
 
 </body>  
-</html>
+
 </html>
