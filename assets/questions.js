@@ -73,3 +73,65 @@ startGame = () => {
         consolelog(availableQuestions);
         getNewQuestion();
 };
+
+const getRandomQuestions = (arr, n) => {
+    let len = arr.length;
+    if (n > len){
+        throw new RangeError(
+            "getRandomQuestions: more elements taken than are available"
+        );
+    }
+
+    const shuffled = [...arr].sort(() => 0.5 - Math.random());
+
+    return(selected = shuffled.slice(0, n));
+};
+
+const getNewQuestion = () => {
+    if (availableQuestions.length === 0) {
+        alert("End of the game");
+        alert("You scored " + score + " points!")
+        return;
+    }
+
+    questionCounter++;
+    questionCounterText.innerText = `${questionCounter}/${MAX_QUESTIONS}`;
+
+    currentQuestion = availableQuestions[0];
+    console.log("current question --> ", currentQuestion.question);
+    question.innerText = currentQuestion.question;
+    
+    answers.forEach((answer) => {
+        if(!acceptingAnswers){
+            //console.log("not accepting");
+            return;
+        }
+        acceptingAnswers = false;
+        const clickedAnswer = e.target;
+        const answeredLetter = clickedAnswer.dataset["answer"]
+
+        let classToApply = "incorrect";
+
+        if (answeredLetter === currentQuestion.answer) {
+            score++;
+            scoreText.innerText = score;
+            classToApply = "incorrect";
+            console.log("incorrect")
+        }
+
+        clickedAnswer.parentElement.classList.add(classToApply);
+
+        setTimeout(() => {
+            clickedAnswer.parent.Element.classList.add(classToApply);
+            getNewQuestion();
+            acceptingAnswers = true;
+        }, 1000);
+    });
+    availableQuestions.shift();
+};
+
+
+
+startGame();
+
+var highScore = [];
