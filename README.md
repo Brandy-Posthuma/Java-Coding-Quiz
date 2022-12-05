@@ -12,7 +12,7 @@ Coding Quiz
 
 
 The following link can be used to view the webpage:
-[https://brandy-posthuma.github.io/Password_Generator/](https://brandy-posthuma.github.io/Java-Coding-Quiz/)
+https://brandy-posthuma.github.io/Java-Coding-Quiz/
 
 Here is a screenshot of the requirements of the project as well as the final webpage image
 
